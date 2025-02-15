@@ -13,12 +13,13 @@ console.log("Pages: ", book.pages)
 console.log("Book Object: ", book)
 
 // Update book description
-book.desc = "one of the giants of modern thinking about high performance” (Alex Hutchinson)—flips the script on the pursuit of excellence, shifting our thinking from high-stress survival mode to fulfillment-oriented thriving mode to creates sustainable success at the highest level, in what Amy Morin, author of 13 Things Mentally Strong People Don’t Do calls “an essential read for anyone interested in self-discovery and meaningful success."
-console.log("Update description: ", book.desc)
+book.desc = "One of the giants of modern thinking about high performance"
+console.log("Updated description: ", book.desc)
 
 // Create an array of 5 books objects
 let bookCopies = []
 for (let i=0; i<5; i++){
-    bookCopies.push({...book})
+    let bookNumber = {bookId: i+1, book}
+    bookCopies.push(bookNumber)
 }
 console.log("Array of 5 Book Objects: ", bookCopies)
