@@ -1,9 +1,15 @@
+function randomNum(faces){
+    return Math.floor(Math.random() * faces) + 1;
+}
+
 document.getElementById('rollDice').addEventListener('click', function() {
-    const numInput = document.getElementById('input').value;
-    const randomNum = Math.floor(Math.random(numInput) * numInput + 1);
-    if (numInput == 0 || numInput > 10 || numInput < 0){
-        document.getElementById('output').textContent = 'Invalid number.';
-    } else {
-        document.getElementById('output').textContent = `Result: ${randomNum}`;
-    }
+    const diceSelect = document.getElementById('diceface')
+    const faces = diceSelect.value
+    const result = randomNum(faces)
+    document.getElementById('result').textContent = `Result: ${result}`;
+});
+
+document.getElementById('reset').addEventListener('click', function() {
+    document.getElementById('result').textContent = 'Result: ';
+    document.getElementById('diceface').value = '6';
 });
